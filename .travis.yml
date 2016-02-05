@@ -6,6 +6,7 @@ install:
 script:
 - xbuild /p:Configuration=Release Mikadocs.DDDPatterns.sln
 - mono ./testrunner/NUnit.Runners.*/tools/nunit-console.exe ./Mikadocs.DDDPatterns.UnitTests/bin/Release/Mikadocs.DDDPatterns.UnitTests.dll
+
 notifications:
   pushover:
     api_key:
