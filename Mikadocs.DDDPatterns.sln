@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mikadocs.DDDPatterns", "Mikadocs.DDDPatterns\Mikadocs.DDDPatterns.csproj", "{692F7173-035B-4FDD-B632-1505EDE0872E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mikadocs.DDDPatterns.UnitTests", "Mikadocs.DDDPatterns.UnitTests\Mikadocs.DDDPatterns.UnitTests.csproj", "{D1607B08-C3CA-4188-8EF5-571AC94A4C51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{692F7173-035B-4FDD-B632-1505EDE0872E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{692F7173-035B-4FDD-B632-1505EDE0872E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{692F7173-035B-4FDD-B632-1505EDE0872E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{692F7173-035B-4FDD-B632-1505EDE0872E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1607B08-C3CA-4188-8EF5-571AC94A4C51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1607B08-C3CA-4188-8EF5-571AC94A4C51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1607B08-C3CA-4188-8EF5-571AC94A4C51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1607B08-C3CA-4188-8EF5-571AC94A4C51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
