@@ -20,7 +20,7 @@ namespace Mikadocs.DDDPatterns.UnitTests
             var sut1 = GloballyUniqueEntityIdentityFactory.CreateNewEntityIdentity<MyGloballyUniqueEntityIdentity>();
             var sut2 = GloballyUniqueEntityIdentityFactory.CreateNewEntityIdentity<MyGloballyUniqueEntityIdentity>();
 
-            Assert.AreNotEqual(sut1, sut2);
+            Assert.AreEqual(sut1, sut2);
         }
 
         [Test]
