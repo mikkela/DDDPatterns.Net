@@ -9,7 +9,7 @@ namespace Mikadocs.DDDPatterns
 {
     public class EnumerableValueObject<T> : ValueObject<IEnumerable<T>>, IEnumerable<T>
     {
-        public EnumerableValueObject(IEnumerable<T> value1) : base(value1)
+        public EnumerableValueObject(IEnumerable<T> value1) : base(value1.ToList())
         {
         }
 
