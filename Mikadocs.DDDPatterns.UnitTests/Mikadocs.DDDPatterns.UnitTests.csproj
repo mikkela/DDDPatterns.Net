@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EnumerableValueObjectTest.cs" />
     <Compile Include="GloballyUniqueEntityIdentityFactoryTest.cs" />
     <Compile Include="NumberBasedEntityIdentityFactoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
