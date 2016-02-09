@@ -9,18 +9,20 @@ namespace Mikadocs.DDDPatterns.UnitTests
 {
     class EnumerableValueObjectTest
     {
-        class EnumerableValueObject : EnumerableValueObject<int>
+        [Test]
+        public void
+            Given_null_When_an_EnumerableValueObject_is_created_from_tvalue_Then_an_ArgumentException_is_thrown
+            ()
         {
-            public EnumerableValueObject(IEnumerable<int> value1) : base(value1)
-            {
-            }
+
+            Assert.Throws<ArgumentException>(() => new EnumerableValueObject<int>(null));
         }
 
         [Test]
         public void Given_two_sets_with_same_elements_When_they_are_compared_Then_they_are_considered_equal()
         {
-            var sut1 = new EnumerableValueObject(new[] {1, 2, 3});
-            var sut2 = new EnumerableValueObject(new[] { 1, 2, 3 });
+            var sut1 = new EnumerableValueObject<int>(new[] {1, 2, 3});
+            var sut2 = new EnumerableValueObject<int>(new[] { 1, 2, 3 });
 
             Assert.IsTrue(sut1.Equals(sut2));
             Assert.IsTrue(sut2.Equals(sut1));
@@ -30,8 +32,8 @@ namespace Mikadocs.DDDPatterns.UnitTests
         [Test]
         public void Given_two_sets_with_different_elements_When_they_are_compared_Then_they_are_not_considered_equal()
         {
-            var sut1 = new EnumerableValueObject(new[] { 1, 2, 3 });
-            var sut2 = new EnumerableValueObject(new[] { 1, 2, 4 });
+            var sut1 = new EnumerableValueObject<int>(new[] { 1, 2, 3 });
+            var sut2 = new EnumerableValueObject<int>(new[] { 1, 2, 4 });
 
             Assert.IsFalse(sut1.Equals(sut2));
             Assert.IsFalse(sut2.Equals(sut1));
@@ -41,7 +43,7 @@ namespace Mikadocs.DDDPatterns.UnitTests
         [Test]
         public void Given_a_set_When_an_EnumberableValueObject_is_created_from_the_set_Then_the_value_object_can_enumerate_the_set()
         {
-            var sut = new EnumerableValueObject(new[] { 1, 2, 3 });
+            var sut = new EnumerableValueObject<int>(new[] { 1, 2, 3 });
 
             CollectionAssert.AreEqual(new[] { 1, 2, 3 }, sut);
         }
@@ -51,7 +53,7 @@ namespace Mikadocs.DDDPatterns.UnitTests
         {
             var set = new List<int>(new[] {1, 2, 3});
 
-            var sut = new EnumerableValueObject(set);
+            var sut = new EnumerableValueObject<int>(set);
             set.Add(4);
 
             CollectionAssert.AreEqual(new[] { 1, 2, 3 }, sut);

@@ -13,6 +13,11 @@ namespace Mikadocs.DDDPatterns
         {
         }
 
+        protected override bool Validate(IEnumerable<T> value)
+        {
+            return value != null;
+        }
+
         public IEnumerator<T> GetEnumerator()
         {
             return Value1.GetEnumerator();
